@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
-    margin: 0%;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lobster', cursive;
@@ -9,7 +9,6 @@
 
 body {
     background-color: #46458C;
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -42,8 +41,9 @@ body {
 .analog-clock::after {
     content: "JS Analog clock";
     position: absolute;
-    color: #FFE569;
-    top: 20%;
+    color: #321E1E;
+    font-weight: 500;
+    top: 18%;
     left: 50%;
     font-size: 20px;
     z-index: 1;
@@ -132,4 +132,43 @@ body {
     width: 18px;
     height: 29%;
     background-color: #CD1818;
+}
+
+@media(max-width:768px) {
+    .analog-clock {
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .analog-clock::after {
+        font-size: 12px;
+    }
+
+    .numbers {
+        font-size: 16px;
+    }
+
+    .sec {
+        width: 3px;
+        height: 40%;
+
+    }
+
+    .min {
+        width: 7px;
+        height: 32%;
+
+    }
+
+    .hrs {
+        width: 10px;
+        height: 29%;
+
+    }
+
+    .analog-clock::before {
+        width: 14px;
+        height: 14px;
+    }
 }
